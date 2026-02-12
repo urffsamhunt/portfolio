@@ -41,21 +41,46 @@ const Posts = [
 
 function App() {
   useGSAP(() => {
-    const box = document.querySelector(".boxy");
-    if (box) {
-      box.addEventListener("mouseenter", () => {
-        gsap.to(".accord", {
-          display: "flex",
-          flexDirection: "column",
-          height: "fit",
+    const box1 = document.querySelector(".box1");
+    const box2 = document.querySelector(".box2");
+    if (box1) {
+      box1.addEventListener("mouseenter", () => {
+        gsap.to(".skills", {
+          opacity: 1.0,
+          immediateRender: false,
+          display: "block",
+          height: "auto",
           duration: 0.25,
           ease: "power2.out",
         });
       });
 
-      box.addEventListener("mouseleave", () => {
-        gsap.to(".accord", {
-          display: "hidden",
+      box1.addEventListener("mouseleave", () => {
+        gsap.to(".skills", {
+          opacity: 0.0,
+          display: "none",
+          height: "0rem",
+          duration: 0.25,
+          ease: "power2.out",
+        });
+      });
+    }
+
+    if (box2) {
+      box2.addEventListener("mouseenter", () => {
+        gsap.to(".tech", {
+          opacity: 1.0,
+          display: "block",
+          height: "auto",
+          duration: 0.25,
+          ease: "power2.out",
+        });
+      });
+
+      box2.addEventListener("mouseleave", () => {
+        gsap.to(".tech", {
+          opacity: 0.0,
+          display: "none",
           height: "0rem",
           duration: 0.25,
           ease: "power2.out",
@@ -97,15 +122,27 @@ function App() {
             <h2 className="text-xl font-semibold">
               What can I work with?
             </h2>
-            <div className="boxy flex flex-col w-full border-t border-b border-r">
-              <div className="pl-2 pr-2 p-1 w-full flex justify-between items-center">
+            <div className="flex flex-col w-full border-t border-b border-r">
+              <div className="pl-2 pr-2 p-1 w-full flex justify-between items-center box1">
                 <span>Programming Languages</span>
                 <LiaAngleDownSolid />
               </div>
+              <div className="bg-white pl-2 pr-2 skills hidden font-bold">
+                <p>
+                  C, Cpp, Rust, Python, EcmaScript(ES6) / TypeScript / Node.js, PHP, Kotlin, Dart, GoLang, GLSL, GDScript, Pinescript, SQL
+                </p>
+              </div>
             </div>
-            <div className="pl-2 pr-2 p-1 border-l border-b w-full flex justify-between items-center">
-              <span>Technologies</span>
-              <LiaAngleDownSolid />
+            <div className="border-l border-b flex flex-col w-full">
+              <div className="pl-2 pr-2 p-1 w-full flex justify-between items-center box2">
+                <span>Technologies</span>
+                <LiaAngleDownSolid />
+              </div>
+              <div className="bg-white pl-2 pr-2 tech hidden font-bold">
+                <p>
+                  React.js, NextJS, FastAPI, Flask, MySQL, PostgresQL, Supabase, Appwrite, AWS Amplify / Lambda / EC2 / DynamoDB, Linux, ClickHouse, REST API, Computer Graphics, Godot Engine, OpenGL/WebGL, Vulkan, PyTorch, Tensorflow
+                </p>
+              </div>
             </div>
           </div>
 
@@ -124,23 +161,23 @@ function App() {
             Latest Posts
           </h2>
           <div>
-          {
-            Posts.map((post) => (
-              <div key={post.title} className="p-2 mb-2 border-t border-gray-300">
-                <h3 className="text-lg font-bold">
-                  {post.title}
-                </h3>
-                <p className="text-sm text-gray-600">
-                  {post.date}
-                </p>
-                <p className="text-md">
-                  {post.description}
-                </p>
-              </div>
-            ))
-            
-          }
-          <Separator variant="dotted"/>
+            {
+              Posts.map((post) => (
+                <div key={post.title} className="p-2 mb-2 border-t border-gray-300">
+                  <h3 className="text-lg font-bold">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {post.date}
+                  </p>
+                  <p className="text-md">
+                    {post.description}
+                  </p>
+                </div>
+              ))
+
+            }
+            <Separator variant="dotted" />
           </div>
         </div>
       </div>
