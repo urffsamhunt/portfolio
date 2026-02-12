@@ -106,7 +106,7 @@ function App() {
             </div>
             <div>
               <SeparatorSM />
-              <div className="lg:flex-col lg:flex lg:items-end lg:w-48 lg:text-lg text-xs flex justify-between">
+              <div className="lg:flex-col lg:flex lg:items-end lg:w-48 lg:text-lg text-[0.7rem] flex justify-between">
                 {
                   Skills.map((skill) => (
                     <span key={skill.name} className="hover:font-bold">
@@ -119,7 +119,7 @@ function App() {
           </div>
           <Separator />
           <div className="w-full flex flex-col mb-6 pl-4 pr-4">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-lg md:text-xl font-semibold mb-1">
               What can I work with?
             </h2>
             <div className="flex flex-col w-full border-t border-b border-r">
@@ -148,7 +148,7 @@ function App() {
 
           <div className="w-full flex flex-col grow justify-between border-t p-4">
             <div>
-              <h1 className="text-xl font-bold my-2">
+              <h1 className="text-lg md:text-xl font-bold my-2">
                 What have I done?
               </h1>
             </div>

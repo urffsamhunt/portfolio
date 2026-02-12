@@ -15,24 +15,24 @@ export function Grid({ children }: { children: React.ReactNode }) {
                 </div>
             </div>
             <div className="w-full flex h-[88%]">
-                <div className="border-gray-400 h-full w-[7%] md:w-[13%] border-r">
+                <div className="border-gray-400 h-full w-[4%] md:w-[13%] border-r">
 
                 </div>
                 <div className="h-full w-full flex grow flex-col overflow-auto">
                     {children}
                 </div>
-                <div className="border-gray-400 h-full w-[7%] md:w-[13%] border-l">
+                <div className="border-gray-400 h-full w-[4%] md:w-[13%] border-l">
 
                 </div>
             </div>
             <div className="w-full flex h-[6%]">
-                <div className="border-gray-400 h-full w-[7%] md:w-[13%] border-t">
+                <div className="border-gray-400 h-full w-[4%] md:w-[13%] border-t">
 
                 </div>
                 <div className="border-gray-400 h-full w-full border-t">
 
                 </div>
-                <div className="border-gray-400 h-full w-[7%] md:w-[13%] border-t">
+                <div className="border-gray-400 h-full w-[4%] md:w-[13%] border-t">
 
                 </div>
             </div>

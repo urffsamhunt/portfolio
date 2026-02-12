@@ -37,11 +37,11 @@ export function Projects() {
                         if (i % 2 === 1) return null;
                         return (
                             <div key={project.name} className="mb-2 w-full">
-                                <a className="text-lg flex gap-4 items-center align-middle font-semibold" href={project.link} target="_blank" rel="noopener noreferrer">
+                                <a className="text-md md:text-lg flex gap-4 items-center align-middle font-semibold" href={project.link} target="_blank" rel="noopener noreferrer">
                                     {project.name}
                                     <LiaExternalLinkSquareAltSolid className="h-6 mb-1" />
                                 </a>
-                                <p className="text-md">
+                                <p className="text-sm md:text-md">
                                     {project.description}
                                 </p>
                             </div>
@@ -56,11 +56,11 @@ export function Projects() {
                         if (i % 2 === 0) return null;
                         return (
                             <div key={project.name} className="mb-2">
-                                <a className="text-lg flex gap-4 items-center align-middle font-semibold" href={project.link} target="_blank" rel="noopener noreferrer">
+                                <a className="text-md md:text-lg flex gap-4 items-center align-middle font-semibold" href={project.link} target="_blank" rel="noopener noreferrer">
                                     {project.name}
                                     <LiaExternalLinkSquareAltSolid className="h-6 mb-1" />
                                 </a>
-                                <p className="text-md">
+                                <p className="text-sm md:text-md">
                                     {project.description}
                                 </p>
                             </div>
